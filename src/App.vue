@@ -18,19 +18,16 @@
             <el-tag>onlyE 英文下划线</el-tag>
             <ob-input v-model="inputValue8" typeValue="onlyE" />
             <el-button @click="showValue">el-button</el-button>
+            <ob-test v-model="modelValue" v-model:typeValue="typeValue" />
         </div>
     </div>
 </template>
 
 <script>
-import { ElTag, ElButton } from 'element-plus'
 import { ref } from 'vue'
 export default {
     name: 'app',
-    components: {
-        ElTag,
-        ElButton,
-    },
+    components: {},
     setup() {
         let inputValue = ref('')
         let inputValue2 = ref('')
@@ -40,15 +37,24 @@ export default {
         let inputValue6 = ref('')
         let inputValue7 = ref('')
         let inputValue8 = ref('')
+        let modelValue = ref('9')
+        let typeValue = ref('10')
+
         function showValue() {
-            console.log('inputValue', inputValue.value)
-            console.log('inputValue2', inputValue2.value)
-            console.log('inputValue3', inputValue3.value)
-            console.log('inputValue4', inputValue4.value)
-            console.log('inputValue5', inputValue5.value)
-            console.log('inputValue6', inputValue6.value)
-            console.log('inputValue7', inputValue7.value)
-            console.log('inputValue8', inputValue8.value)
+            // console.log('inputValue', inputValue.value)
+            // console.log('inputValue2', inputValue2.value)
+            // console.log('inputValue3', inputValue3.value)
+            // console.log('inputValue4', inputValue4.value)
+            // console.log('inputValue5', inputValue5.value)
+            // console.log('inputValue6', inputValue6.value)
+            // console.log('inputValue7', inputValue7.value)
+            // console.log('inputValue8', inputValue8.value)
+            console.log('modelValue', modelValue.value)
+            console.log('typeValue', typeValue.value)
+            modelValue.value = 777
+            typeValue.value = 666
+            console.log('modelValue', modelValue.value)
+            console.log('typeValue', typeValue.value)
         }
         return {
             showValue,
@@ -60,6 +66,8 @@ export default {
             inputValue6,
             inputValue7,
             inputValue8,
+            modelValue,
+            typeValue,
         }
     },
 }

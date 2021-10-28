@@ -1,17 +1,7 @@
 // vue.config.js 文件配置如下
-// const Components = require('unplugin-vue-components/webpack')
-// const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
+const Components = require('unplugin-vue-components/webpack')
+const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 module.exports = {
-    // pages: {
-    //     index: {
-    //         entry: 'packages/index.js',
-    //         template: 'public/index.html',
-    //         filename: 'index.html',
-    //     },
-    // },
-    configureWebpack: {
-        devtool: 'source-map',
-    },
     // 强制内联CSS
     css: {
         extract: false,
@@ -29,11 +19,11 @@ module.exports = {
                 return options
             })
     },
-    // configureWebpack: (config) => {
-    //     config.plugins.push(
-    //         Components({
-    //             resolvers: [ElementPlusResolver()],
-    //         })
-    //     )
-    // },
+    configureWebpack: (config) => {
+        config.plugins.push(
+            Components({
+                resolvers: [ElementPlusResolver()],
+            })
+        )
+    },
 }

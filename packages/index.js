@@ -1,12 +1,11 @@
 /*
  * @Author: linbin
  * @Date: 2021-10-27 16:41:03
- * @LastEditTime: 2021-10-28 17:57:50
+ * @LastEditTime: 2021-10-28 18:43:36
  * @LastEditors: linbin
  * @Description:
- * @FilePath: /linbin/ob-components/packages/index.js
+ * @FilePath: /ob-components/packages/index.js
  */
-import 'element-plus/dist/index.css'
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = (Vue) => {
     // 判断是否可以安装

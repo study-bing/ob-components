@@ -2,14 +2,10 @@
     <el-input :modelValue="modelValue" @input="updateVal" @change="changeVal" v-bind="$attrs" />
 </template>
 <script>
-import { ElInput } from 'element-plus'
 import { setValue } from './setValue'
 import { isEmpty } from '../utils/utils'
 export default {
     name: 'obInput',
-    components: {
-        ElInput,
-    },
     props: {
         modelValue: {
             type: [String, Number], //String | Number

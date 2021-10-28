@@ -51,6 +51,7 @@ module.exports = {
         'vue/html-closing-bracket-spacing': ["error", {
             "startTag": "never",
         }],
+        "vue/no-v-model-argument": "off",
     },
     parserOptions: {
         parser: 'babel-eslint'
